@@ -1,0 +1,124 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+@font-face {
+    font-family: "rozhaone";
+    src: url('../fonts/serif/rozhaone-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "lato";
+    src: url('../fonts/sans-serif/lato-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+}
+
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+
+.subsection {
+    display: flex;
+}
+
+img {
+    width: 100%;
+}
+
+figure {
+    margin: 0px;
+}
+
+.article-image {
+    width: 33%;
+    float: left;
+    margin-right: 1rem;
+}
+
+.subsection {
+    margin: 1rem 0rem;
+}
+
+.subsection figure {
+    margin: 0rem 0.25rem;
+    background-color: #262626; 
+}
+
+.subsection figure figcaption {
+    padding: 0.5rem 0.5rem;
+}
